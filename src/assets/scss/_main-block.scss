@@ -16,27 +16,69 @@
         height: 655px;
     }
 
-    &__title{
-        @include text(32px, 700, 39px, $primaryColor); 
+    &__title {
+        @include text(32px, 700, 39px, $primaryColor);
         max-width: 247px;
-        // margin-top: -6px;
+        margin-bottom: 36px;
+
         span {
             color: $accentColor;
         }
+
+
+        @include media (md) {
+            max-width: 540px;
+        }
+
+        @include media (ld) {
+            max-width: 715px;
+        }
+
     }
- 
-    &__wrapper {
-        display: flex;
-        flex-direction: column;
+
+    &__price {
+        margin-left: -3px;
+        margin-bottom: 15px;
     }
-    
+
+    &__price-box {
+        position: relative;
+    }
+
+    &__price-box::after {
+        content: "";
+        background-image: url(./../images/percent.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+
+        width: 50px;
+        height: 57px;
+
+        position: absolute;
+        top: 10%;
+        right: 35%;
+
+        @include media (sm) {
+            right: 63%;
+        }
+
+        @include media (md) {
+            right: 0;
+            left: 20%;
+        }
+
+        @include media (ld) {
+            left: 12%;
+        }
+    }
+
     &__btn {
         width: 275px;
         height: 68px;
         border: 3px solid $primaryColor;
         border-radius: 7px;
         background-color: transparent;
-        @include text(16px, 900, 20px, white); 
+        @include text(16px, 900, 20px, white);
         filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
         transform: translateY(-6px);
     }

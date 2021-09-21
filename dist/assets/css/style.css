@@ -135,7 +135,9 @@ a {
 }
 
 .main {
-    background-image: url(./../images/main.jpeg);
+    background-image: url(./../images/main.jpg);
+    background-size: cover;
+    background-position-x: 62%;
     color: #fff;
 }
 
@@ -155,7 +157,6 @@ a {
     line-height: 39px;
     color: #fff;
     max-width: 247px;
-    margin-top: -6px;
 }
 
 .main__title span {
