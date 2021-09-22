@@ -1,0 +1,9 @@
+.about {
+    .container {
+        @extend %container;
+    }
+
+    &__grid {
+        display: grid;
+    }
+}
