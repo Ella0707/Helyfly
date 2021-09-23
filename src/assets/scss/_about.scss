@@ -6,4 +6,287 @@
     &__grid {
         display: grid;
     }
+
+    &__title {
+        @include text (28px, 400, 34px, $textColor);
+        text-align: center;
+        margin-top: 39px;
+        margin-bottom: 13px;
+
+        @include media (sm) {
+            width: 289px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @include media (ld) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+
+            font-size: 40px;
+            text-align: left;
+            margin-left: 0;
+        }
+
+    }
+
+    &__img {
+        width: 290px;
+        margin-bottom: 30px;
+
+
+        @include media (sm) {
+            width: 506px;
+        }
+
+        @include media (md) {
+            width: 668px;
+        }
+
+        @include media (ld) {
+            width: 554px;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 4;
+
+            padding-top: 45px;
+            margin: 0 auto;
+        }
+
+    }
+
+    &__subtitle {
+        @include text (14px, 400, 20px, $textColor);
+        margin-bottom: 31px;
+
+        @include media (md) {
+            width: 425px;
+        }
+
+        @include media (ld) {
+        width: 487px;
+        font-size: 18px;
+        line-height: 26px;
+        }
+
+    }
+
+    &__list {
+        margin-left: 45px;
+    }
+
+
+    &__item {
+        @include text (14px, 500, 20px, $textColor);
+        padding-left: 15px;
+        padding-bottom: 33px;
+
+        list-style-type: none;
+
+        @include media (md) {
+            padding-left: 10px;
+        }
+
+
+        &:first-child {
+            position: relative;
+
+            &::before {
+                content: "";
+                background-image: url(./../images/clock.png);
+                background-repeat: no-repeat;
+                width: 33px;
+                height: 33px;
+
+                position: absolute;
+                top: -10%;
+                left: -16%;
+
+                @include media (sm) {
+                    left: -10%;
+                }
+
+                @include media (md) {
+                    left: -7%;
+                }
+
+                @include media (ld) {
+                    left: -10%;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            position: relative;
+
+
+            &::before {
+                content: "";
+                background-image: url(./../images/camera.svg);
+                background-repeat: no-repeat;
+                width: 35px;
+                height: 33px;
+
+                position: absolute;
+                top: -10%;
+                left: -16%;
+
+                @include media (sm) {
+                    left: -10%;
+                }
+
+                @include media (md) {
+                    left: -7%;
+                }
+
+                @include media (ld) {
+                    left: -10%;
+                }
+            }
+
+        }
+
+        &:nth-child(3) {
+            position: relative;
+
+
+            &::before {
+                content: "";
+                background-image: url(./../images/map__place.svg);
+                background-repeat: no-repeat;
+                width: 33px;
+                height: 33px;
+
+                position: absolute;
+                top: -10%;
+                left: -16%;
+
+                @include media (sm) {
+                    left: -10%;
+                }
+
+                @include media (md) {
+                    left: -7%;
+                }
+
+                @include media (ld) {
+                    left: -10%;
+                }
+            }
+        }
+
+        &:last-child {
+            position: relative;
+
+
+            &::before {
+                content: "";
+                background-image: url(./../images/chat.svg);
+                background-repeat: no-repeat;
+                width: 33px;
+                height: 33px;
+
+                position: absolute;
+                top: -10%;
+                left: -16%;
+
+                @include media (sm) {
+                    left: -10%;
+                }
+
+                @include media (md) {
+                    left: -7%;
+                }
+
+                @include media (ld) {
+                    left: -10%;
+                }
+            }
+
+        }
+    }
+
+    &__star {
+        span {
+            @include text (14px, 800, 20px, $textColor);
+            @include media (ld) {
+                font-size: 18px;
+                }
+
+        }
+
+        @include text (14px, 500, 20px, $textColor);
+        text-align: center;
+        padding-left: 48px;
+
+        border-top: 0.5px solid #C7C7C7;
+        border-bottom: 0.5px solid #C7C7C7;
+
+        height: 69px;
+
+        position: relative;
+
+
+        @include media (sm) {
+            text-align: left;
+            padding-left: 60px;
+            padding-top: 20px;
+
+            @include media (md) {
+                padding-left: 55px;
+            }
+
+            @include media (ld) {
+                font-size: 18px;
+                }
+        }
+
+        &::before {
+            content: "";
+            background-image: url(./../images/cub.svg);
+            background-repeat: no-repeat;
+            height: 36px;
+            width: 36px;
+
+            position: absolute;
+            top: 15%;
+            left: 3%;
+
+            @include media (md) {
+                left: 0%;
+            }
+        }
+
+
+        &::after {
+            content: "";
+            background-image: url(./../images/star.png);
+            background-repeat: no-repeat;
+            width: 120px;
+            height: 20px;
+
+            position: absolute;
+            top: 50%;
+            left: 21%;
+
+            @include media (sm) {
+                top: 33%;
+                left: 58%;
+            }
+
+            @include media (md) {
+                left: 44%;
+            }
+
+            @include media (ld) {
+                left: 70%;
+            }
+        }
+
+
+
+
+    }
+
 }

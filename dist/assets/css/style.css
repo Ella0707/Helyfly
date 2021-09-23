@@ -1,4 +1,4 @@
-.header .container, .main .container {
+.header .container, .main .container, .about .container {
     padding: 0 15px;
     width: 100%;
     max-width: 1140px;
@@ -6,19 +6,19 @@
 }
 
 @media screen and (min-width: 576px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .about .container {
         padding: 0 35px;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .about .container {
         padding: 0 50px;
     }
 }
 
 @media screen and (min-width: 1280px) {
-    .header .container, .main .container {
+    .header .container, .main .container, .about .container {
         padding: 0px;
     }
 }
@@ -230,4 +230,8 @@ a {
     filter: drop-shadow(0px 4px 70px rgba(255, 255, 255, 0.7)) drop-shadow(0px 4px 4px rgba(255, 255, 255, 0.25));
     -webkit-transform: translateY(-6px);
     transform: translateY(-6px);
+}
+
+.about__grid {
+    display: grid;
 }
