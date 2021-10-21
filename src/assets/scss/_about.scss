@@ -208,6 +208,7 @@
     }
 
     &__star {
+        margin-bottom: 60px;
         span {
             @include text (14px, 800, 20px, $textColor);
             @include media (ld) {
@@ -283,10 +284,5 @@
                 left: 70%;
             }
         }
-
-
-
-
     }
-
 }
